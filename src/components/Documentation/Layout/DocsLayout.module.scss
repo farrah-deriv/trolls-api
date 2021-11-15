@@ -2,8 +2,10 @@
     .vertical-separator {
         display: none;
     }
+    .page-wrapper {
+        flex-direction: column;
+    }
 }
-
 
 .doc-content {
     flex-direction: column;
@@ -13,20 +15,20 @@
     justify-content: unset;
 
     .page-wrapper {
-      width: 100% !important;
+        width: 100% !important;
     }
 }
 
-#content > .documentation {
+.documentation {
     width: 80%;
     margin-top: 20px;
-  
+
     @media (max-width: 1300px) {
-      width: 90%;
+        width: 90%;
     }
-  
+
     @media (max-width: 1164px) {
-      width: 95%;
+        width: 95%;
     }
 }
 

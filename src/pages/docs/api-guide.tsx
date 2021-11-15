@@ -1,5 +1,5 @@
 import { PageComponentWithLayout } from "../../types";
-import DocsLayout from "components/Documentation/Layout/DocsLayout";
+import DocsLayout from "../../components/Documentation/Layout/DocsLayout";
 
 const ApiGuide: PageComponentWithLayout = () => {
     return <div>Api Guide</div>;

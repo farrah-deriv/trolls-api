@@ -1,0 +1,10 @@
+.off-canvas-menu {
+    height: 105px; // temporary
+    @media (max-width: 992px) {
+        // temporary
+        height: 0; // temporary
+    }
+}
+.show-canvas {
+    left: 0;
+}

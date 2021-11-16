@@ -1,0 +1,59 @@
+@import "../Sections.module";
+
+.rowContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+
+@media screen and (max-width: 992px){
+    flex-direction: column;
+}
+    .singleContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .libraryIcon {
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            width: 80%;
+            margin-bottom: 12px;
+            line-height: 1.25;
+            font-size: 48px;
+            text-align: center;
+            color: $black-color; 
+            margin-top: 0;
+            max-width: 1024px;
+        }
+
+        span {
+            color: $black-color;
+        }
+
+        a {
+            padding: 10px 16px;
+            border-radius: 4px;
+            background-color: $red-color;
+            text-decoration: none;
+            font-weight: 700;
+            color: $white-color;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .singleContainer h1 {
+        font-size: 24px !important;
+        max-width: 290px;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+}

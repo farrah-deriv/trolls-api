@@ -1,0 +1,17 @@
+.token.comment{     
+    color:#75715e;
+}
+
+
+.token.keyword,.token.operator{
+    color: #f92672;
+}
+
+
+.token.string {
+    color: #e6db74;
+}
+
+.token.number {
+    color: #ae81ff;
+}

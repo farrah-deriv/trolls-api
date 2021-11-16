@@ -3,12 +3,13 @@ import style from "./GetStarted.module.scss"
 import Image from "next/image"
 
 const GetStartedCard: React.FC<cardPropsType> = ({ number, href, icon, title, content }) => {
+    const img_alt = icon.split(".")[0]
     return (
         <a className={style["main-page-card"]} href={href} rel="noopener noreferrer">
             <div className={style["header"]}>
                 <h3>{number}. {title}</h3>
                 <div className={style["image"]}>
-                    <Image src={"/" + icon} alt={icon + " " + "icon"} width={32} height={32} />
+                    <Image src={"/" + icon} alt={`${img_alt} icon`} width={32} height={32} />
                 </div>
             </div>
             <div className={style["content"] + " " + style["hide-on-mobile"]} >

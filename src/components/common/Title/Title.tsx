@@ -10,7 +10,7 @@ const Title: React.FC<TitlePropsType> = ({
 }) => {
     const Title = headerSize as keyof JSX.IntrinsicElements || "h1" as keyof JSX.IntrinsicElements;
     return (
-        <Title>
+        <Title id="title"> 
             {children}
         </Title>
     )

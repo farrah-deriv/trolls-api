@@ -4,6 +4,7 @@ import Image from "next/image"
 
 const GetStartedCard: React.FC<cardPropsType> = ({ number, href, icon, title, content }) => {
     const img_alt = icon.split(".")[0]
+    
     return (
         <a className={style["main-page-card"]} href={href} rel="noopener noreferrer">
             <div className={style["header"]}>

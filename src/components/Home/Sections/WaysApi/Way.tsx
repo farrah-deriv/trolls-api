@@ -4,6 +4,7 @@ import Image from "next/image"
 
 const Way: React.FC<WapPropType> = ({ way_text, image }) => {
     const img_alt = image.split(".")[0]
+
     return (
         <div className={style["main-page-card"] + " " + style["ways"]}>
             <div className={style["image"]}>

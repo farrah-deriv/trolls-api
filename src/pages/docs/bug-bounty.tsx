@@ -1,5 +1,10 @@
+import FeedbackSection from "../../components/FeedbackSection/FeedbackSection";
+import DocsLayout from "../../components/Documentation/Layout/DocsLayout";
+
 const BugBounty = () => {
-    return <div>BugBounty</div>;
+    return <FeedbackSection id="bugBounty" />;
 };
+
+BugBounty.Layout = DocsLayout;
 
 export default BugBounty;

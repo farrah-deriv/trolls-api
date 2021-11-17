@@ -5,7 +5,7 @@ const DEFAULT_API_URL = "frontend.binaryws.com";
 const DEFAULT_LANGUAGE = "EN";
 const DEFAULT_BRAND = "deriv";
 
-export function initializeSocket(obj) {
+export function initializeSocket() {
     return dispatch => {
         const socket = new WebSocket(
             "wss://" +
@@ -21,8 +21,6 @@ export function initializeSocket(obj) {
 
         socket.onopen = function () {
             dispatch(socketConnectionSuccess());
-
-            socket.send(obj);
         };
 
         socket.onerror = function () {

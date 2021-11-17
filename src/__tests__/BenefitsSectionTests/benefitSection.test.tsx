@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { BenefitSection } from "./BenefitSection";
+import { BenefitSection } from "../../components/BenefitsSection/BenefitSection";
 
 describe("BenefitSection", () => {
     test("BenefitSection component is rendered", () => {

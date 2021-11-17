@@ -13,13 +13,13 @@ type TextContentPropsType = {
   };
 
 const TextContent: React.FC<TextContentPropsType> = ({ data }) => (
-    <>
+    <div id="textContent">
         <Title headerSize="h1">{data.title}</Title>
         <div className={styleSections.subheader}>
             <span>{data.textFirstPart}</span>
             <span>{data.textSecondPart}</span>
         </div>
-    </>
+    </div>
 );
 
 export default TextContent;

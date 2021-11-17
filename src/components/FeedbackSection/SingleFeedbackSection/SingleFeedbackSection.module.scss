@@ -1,49 +1,52 @@
-.singleContainer {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  h2 {
-    font-size: 32px;
-    margin-bottom: 8px;
-    color: #fff;
-    line-height: 1.5;
-    text-align: center;
-  }
-  h3 {
-    margin-bottom: 16px;
-    font-size: 24px;
-    text-align: left;
-    line-height: 1.5;
-    color: #333;
-  }
-  p {
-    margin-bottom: 32px;
-    text-align: center;
-    line-height: 28px;
-  }
-   .communityButton {
-    padding: 6px 16px;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    border: solid 1px #999;
-    &:hover {
-        background-color: #999;
+.single-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    h2 {
+        font-size: 32px;
+        margin-bottom: 8px;
+        color: #fff;
+        line-height: 1.5;
+        text-align: center;
     }
-  }
-  .blackColor {
-    color: black;
-  }
-  .whiteColor {
-    color: white;
-  }
-  .grayColor{
-    color: #c2c2c2;
-  }
- 
+    h3 {
+        margin-bottom: 16px;
+        font-size: 24px;
+        text-align: left;
+        line-height: 1.5;
+        color: #333;
+    }
+    p {
+        margin-bottom: 32px;
+        text-align: center;
+        line-height: 28px;
+    }
+    .community-btn {
+        padding: 6px 16px;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        border: solid 1px #999;
+        &:hover {
+            background-color: #999;
+        }
+    }
+    .blackColor {
+        color: black;
+    }
+    .whiteColor {
+        color: white;
+    }
+    .grayColor {
+        color: #c2c2c2;
+    }
+}
+.dark {
+    color: #fff;
+    background-color: #0e0e0e;
 }

@@ -1,0 +1,66 @@
+.doc-main-title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    text-align: center;
+    color: #333333;
+
+    @media (max-width: 992px) {
+        font-size: 32px;
+    }
+}
+
+.quick-start-intro {
+    p {
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+    ul {
+        padding-left: 20px;
+
+        li {
+            margin-bottom: 16px;
+        }
+    }
+}
+.api-sub-title {
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 16px;
+    color: #333333;
+
+    @media (max-width: 992px) {
+        font-size: 20px;
+        line-height: 25px;
+        text-align: left;
+        width: 100%;
+    }
+    @media (max-width: 480px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+.bullet {
+    list-style-type: bullet;
+}
+
+@media (max-width: 992px) {
+    .quick-start-intro {
+        p {
+            line-height: 28px;
+            margin-bottom: 16px;
+        }
+        ul {
+            padding-left: 20px;
+
+            li {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .bullet {
+        list-style-type: bullet;
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import useIsMobile from "hooks/useIsMobile";
 import styles from "./Header.module.scss";
 import { PATHS } from "utils";
 
@@ -14,10 +15,14 @@ const navigation = [
 ];
 
 const Header: React.FC = () => {
+    const is_mobile = useIsMobile();
+    const image_width = is_mobile ? 84 : 180;
+    const image_height = is_mobile ? 34 : 73;
+
     return (
         <div id="main-nav" className={styles.nav}>
-            <div className={`${styles.topNav} ${styles.flexContainer}`}>
-                <div className={styles.topNavContainer}>
+            <div className={`${styles["top-nav"]} ${styles["flex-container"]}`}>
+                <div className={styles["top-nav-container"]}>
                     {navigation.map(
                         ({ id, title, path }, i) =>
                             i < 3 && (
@@ -30,22 +35,19 @@ const Header: React.FC = () => {
             </div>
 
             <header className={styles.header}>
-                <div className={styles.headerContainer}>
-                    <Image
-                        id="hamburger"
-                        className={styles.hamburger}
-                        alt="Hamburger menu"
-                        src="/hamburger_menu.svg"
-                        width="16"
-                        height="16"
-                    />
+                <div className={styles["header-container"]}>
+                    <div id="hamburger" className={styles.hamburger}>
+                        <Image alt="Hamburger menu" src="/hamburger_menu.svg" width="16" height="16" />
+                    </div>
                     <Link href={navigation[0].path}>
-                        <a className={styles.flexContainer}>
-                            <Image className="logo" alt="Deriv Logo" src="/deriv.svg" width="180" height="73" />
+                        <a className={styles["flex-container"]}>
+                            <div className={styles.logo}>
+                                <Image alt="Deriv Logo" src="/deriv.svg" width={image_width} height={image_height} />
+                            </div>
                             <h1 className={styles.branding}>API</h1>
                         </a>
                     </Link>
-                    <nav id="navbar" className={`${styles.flexContainer} ${styles.navbar}`}>
+                    <nav id="navbar" className={`${styles["flex-container"]} ${styles.navbar}`}>
                         {navigation.map(({ id, title, path }, i) =>
                             i > 2 ? (
                                 <Link key={id} href={path}>

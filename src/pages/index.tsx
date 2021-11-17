@@ -1,15 +1,19 @@
 import FeedbackSection from "../components/FeedbackSection/FeedbackSection";
-import Section from "../components/Home/Section/Section";
+import Comprehensive from "../components/Home/Sections/Comprehensive";
+import { BenefitSection } from "../components/BenefitsSection/BenefitSection";
+import DerivApi from "components/Home/Sections/DerivApi/DerivApi";
+import WaysApi from "components/Home/Sections/WaysApi/WaysApi";
+import GetStarted from "components/Home/Sections/GetStarted/GetStarted"
 
-const Home = () => {
-    return (
-        <div>
-            Good luck Trolls!
-            <Section>
-                <FeedbackSection id="home" />
-            </Section>
-        </div>
-    );
-};
+const Home = () => (
+    <div id="home-page">
+        <DerivApi />
+        <BenefitSection />
+        <Comprehensive />
+        <WaysApi />
+        <GetStarted />
+        <FeedbackSection id="home" />
+    </div>
+);
 
 export default Home;

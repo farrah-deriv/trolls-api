@@ -1,0 +1,14 @@
+@media (max-width: 992px) {
+    select.mobile-page-selector {
+        display: block;
+        padding: 8px 5px;
+        border-radius: 4px;
+        background-color: white;
+    }
+}
+
+.mobile-page-selector {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: none;
+}

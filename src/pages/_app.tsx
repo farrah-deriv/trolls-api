@@ -1,9 +1,11 @@
 import "styles/globals.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import "../../src/styles/prism-theme.css"
 import Header from "components/common/Header/Header";
 import Footer from "components/common/Footer";
 import { PageComponentWithLayout } from "../types";
+import CanvasMenu from "components/common/CanvasMenu/CanvasMenu";
 
 const EmptyLayout: React.FC = ({ children }) => <div id="what?">{children}</div>;
 
@@ -25,6 +27,7 @@ const MyApp = ({ Component, pageProps }: MyApp) => {
                 <link rel="icon" href="/deriv.png" />
             </Head>
             <Header />
+            <CanvasMenu />
             <div className="main-content">
                 <Layout>
                     <Component {...pageProps} />

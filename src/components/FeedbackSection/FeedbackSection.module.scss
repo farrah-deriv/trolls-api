@@ -1,18 +1,49 @@
-.rowContainer {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 80%;
-  align-items: center;
-  justify-content: center;
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 208px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
-  @media screen and (max-width: 992px){
+    .row-container {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.cta {
+    width: auto;
+    border-radius: 4px;
+    background-color: rgba(240, 241, 243, 0.64);
+    margin-bottom: 40px;
+    display: flex;
     flex-direction: column;
-  }
+    justify-content: center;
+    align-items: center;
+
+    .row-container {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
 }
 
-.feedbackHomeContainer {
-  background-color: black;
-}
-.bugBountyContainer, .appRegistartion{
-  background-color: rgba(240, 241, 243, 0.64);
+.dark {
+    color: #fff;
+    background-color: #0e0e0e;
 }

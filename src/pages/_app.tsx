@@ -1,11 +1,13 @@
-import "styles/globals.scss";
+import { Provider } from "react-redux";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import "../../src/styles/prism-theme.css"
+import { useStore } from "../store";
 import Header from "components/common/Header/Header";
 import Footer from "components/common/Footer";
 import { PageComponentWithLayout } from "../types";
 import CanvasMenu from "components/common/CanvasMenu/CanvasMenu";
+import "styles/globals.scss";
+import "../../src/styles/prism-theme.css";
 
 const EmptyLayout: React.FC = ({ children }) => <div id="what?">{children}</div>;
 
@@ -15,9 +17,10 @@ type MyApp = AppProps & {
 
 const MyApp = ({ Component, pageProps }: MyApp) => {
     const Layout = Component.Layout || EmptyLayout;
+    const store = useStore(pageProps.initialReduxState);
 
     return (
-        <>
+        <Provider store={store}>
             <Head>
                 <title>Deriv.com API</title>
                 <meta
@@ -34,7 +37,7 @@ const MyApp = ({ Component, pageProps }: MyApp) => {
                 </Layout>
             </div>
             <Footer />
-        </>
+        </Provider>
     );
 };
 

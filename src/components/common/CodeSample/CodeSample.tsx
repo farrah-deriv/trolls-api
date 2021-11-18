@@ -24,13 +24,12 @@ const CodeSample = ({ id, title, desc, subdesc }: Props) => {
         fetch(filePath).then((response) => response.text()).then(data => {
             const formattedCode = data.replaceAll("&lt;", "<").replaceAll("&gt;", ">")
             setFileContent(formattedCode)
+        })
 
-        }
-        )
     }, [id, lang])
 
     return (
-        <div className={styles.codeBlock} id="codeSample">
+        <div className={styles.codeBlock}>
             <h2 className={styles.codeBlockTitle}>{title}</h2>
             <p className={styles.codeBlockDesc}>{desc}</p>
             {subdesc && <p className={styles.codeBlockDesc}>{subdesc}</p>}

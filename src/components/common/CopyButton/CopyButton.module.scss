@@ -8,19 +8,16 @@
     cursor: copy;
     flex-shrink: 0;
 
-
     &_image {
       margin: 0 9px 0 3px;
-     
     }
 
     &_text {
       margin-left: 9px;
-     
     }
 
     &:hover {
       background-color: #424242;
       border-top-right-radius: 6px;
     }
-  }
+}

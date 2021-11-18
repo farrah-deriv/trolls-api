@@ -29,7 +29,6 @@ const CodeContent = ({ lang, data }: Props) => {
                     <pre className={styles.pre}><code className={`language-${lang}`}>{data}</code></pre>
                 </div>
             ) : null}
-
         </>
     )
 }

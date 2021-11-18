@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CodeContent from "../CodeContent/CodeContent";
 import CopyButton from "../CopyButton/CopyButton";
-import styles from "./CodeSample.module.scss";
+import styles from "./CodeBlock.module.scss";
 
 type Props = {
     id?: string,
@@ -10,21 +10,19 @@ type Props = {
     subdesc?: string
 }
 
-const CodeSample = ({ id, title, desc, subdesc }: Props) => {
+const CodeBlock = ({ id, title, desc, subdesc }: Props) => {
 
-    const [fileContent, setFileContent] = useState(" ");
+    const [file_content, setFileContent] = useState(" ");
     const [lang, setLang] = useState("javascript");
 
     useEffect(() => {
-        const fileExtension: any = { javascript: "js", csharp: "cs", php: "php", python: "py" }
-        const fileExt = fileExtension[`${lang}`];
-        const filePath = `/demoCode/${id}-${lang}.${fileExt}`;
-
-        fetch(filePath).then((response) => response.text()).then(data => {
-            const formattedCode = data.replaceAll("&lt;", "<").replaceAll("&gt;", ">")
-            setFileContent(formattedCode)
+        const file_extension: any = { javascript: "js", csharp: "cs", php: "php", python: "py" }
+        const file_ext = file_extension[`${lang}`];
+        const file_path = `/demoCode/${id}-${lang}.${file_ext}`;
+        fetch(file_path).then((response) => response.text()).then(data => {
+            const formatted_code = data.replaceAll("&lt;", "<").replaceAll("&gt;", ">")
+            setFileContent(formatted_code)
         })
-
     }, [id, lang])
 
     return (
@@ -42,12 +40,12 @@ const CodeSample = ({ id, title, desc, subdesc }: Props) => {
                             <option value="python">Python</option>
                         </select>
                     </p>
-                    <CopyButton size="16" contentToCopy={fileContent} />
+                    <CopyButton size="16" content_to_copy={file_content} />
                 </div>
-                <CodeContent lang={lang} data={fileContent} />
+                <CodeContent lang={lang} data={file_content} />
             </div>
         </div>
     )
 }
 
-export default CodeSample;
+export default CodeBlock;

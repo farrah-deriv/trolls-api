@@ -8,13 +8,12 @@ import "prismjs/components/prism-csharp";
 import "prismjs/components/prism-php";
 import styles from "./CodeContent.module.scss";
 
-type Props = {
-    lang?: string,
-    data?: string
+type CodeContentProps = {
+    lang: string,
+    data: string
 }
 
-const CodeContent = ({ lang, data }: Props) => {
-
+const CodeContent: React.FC<CodeContentProps> = ({ lang, data }) => {
     const [show_data, setShowData] = useState(false)
 
     useEffect(() => {
@@ -24,11 +23,11 @@ const CodeContent = ({ lang, data }: Props) => {
 
     return (
         <>
-            {show_data ? (
+            {show_data && (
                 <div id="codeContent">
                     <pre className={styles.pre}><code className={`language-${lang}`}>{data}</code></pre>
                 </div>
-            ) : null}
+            )}
         </>
     )
 }

@@ -8,8 +8,7 @@ type CopyTextProps = {
     contentToCopy: string
 }
 
-
-const CopyText: React.FC<CopyTextProps> = ({ size = "16", contentToCopy }) => {
+const CopyButton: React.FC<CopyTextProps> = ({ size = "16", contentToCopy }) => {
 
     const [data, setData] = useState("");
 
@@ -44,4 +43,4 @@ const CopyText: React.FC<CopyTextProps> = ({ size = "16", contentToCopy }) => {
 
 };
 
-export default CopyText;
+export default CopyButton;

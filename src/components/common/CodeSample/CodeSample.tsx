@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import CodeContent from "../CodeContent/CodeContent";
 import CopyButton from "../CopyButton/CopyButton";
 import styles from "./CodeSample.module.scss";

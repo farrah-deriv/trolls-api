@@ -16,7 +16,7 @@ const JsonSchemasComponent: React.FC = () => {
 
     return(
         <div className={style["page-container"]}>
-            <h1 className={style["doc-main-title"]}>JSON Schemas</h1>
+            <h1 className="doc-main-title">JSON Schemas</h1>
             <p>
      Our API is defined by 
                 <Link href={json_navigation[0].path}><a target="_blank" rel="noreferrer"> {json_navigation[0].title}</a></Link>. 

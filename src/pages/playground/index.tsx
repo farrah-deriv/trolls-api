@@ -1,58 +1,36 @@
 import style from "./Playground.module.scss";
+import Title from "components/common/Title";
+import SelectRequestInput from "components/common/SelectRequestInput/SelectRequestInput";
+import TokenInputField from "../../components/common/TokenInputField/TokenInputField";
+import Button from "components/common/Button/Button";
+import Link from "next/dist/client/link";
+import RequestJSONBox from "components/common/RequestJSONBox/RequestJSONBox";
 
 const PlayGround: React.FC = () => (
     <div id="content" className={`${style["playground-content"]} ${style.dark}`}>
-        <h1 className={`${style["dark"]} ${style["header"]}`}>API Playground</h1>
+        <div className={style["header-title"]}>
+            <Title headerSize="h1" >
+                API Playground
+            </Title>
+        </div>
         <div className={`${style["page-wrapper"]} ${style.dark}`}>
             <div className={style["playground"]}>
                 <div className={`${style["playground-page-wrapper"]} ${style.dark}`}>
                     <div className={`${style["playground-api-json"]} ${style.dark}`}>
-                        <fieldset>
-                            <select id="api-call-selector">
-                                <option selected disabled hidden>
-                                    Select API Call - Version 3
-                                </option>
-                                <optgroup label="choose any option">
-                                    <option value="{{ method.name }}"></option>
-                                </optgroup>
-                            </select>
-                        </fieldset>
+                        <SelectRequestInput />
                         <div className={`${style["api-token"]} ${style.dark}`}>
-                            <fieldset id="api-token-fieldset">
-                                <input
-                                    type="text"
-                                    id="api-token"
-                                    className={style["api-token-input"]}
-                                    placeholder="API Token"
-                                />
-                                <button
-                                    id="send-auth-manually-btn"
-                                    className={`${style["btn-authenticate"]} ${style.bold}`}
-                                >
-                                    Authenticate
-                                </button>
-                            </fieldset>
+                            <TokenInputField />
                             <div className={style["vertical-separator"]}></div>
                             <div className={style["cta"]}>
                                 <p className={style["title"]}>Looking for your API token?</p>
-                                <a target="tokeninput" href="https://app.deriv.com/account/api-token">
-                                    <div className={style["cta-button"]}>Get your API token</div>
-                                </a>
+                                <Link href="https://app.deriv.com/account/api-token">
+                                    <a target="tokeninput" >
+                                        <Button className={style["cta-button"]} text={"Get your API token"}/>
+                                    </a>
+                                </Link>
                             </div>
                         </div>
-                        <div className={style["playground-box"]}>
-                            <label className={style["inline-label"]}>Request JSON</label>
-                            <textarea id="playground-request" placeholder="Request JSON"></textarea>
-                            <div className={style["json-btn-wrapper"]}>
-                                <a id="playground-reset-btn" href="javascript:;">
-                                    <button className={style["btn-submit"]}>Reset Connection</button>
-                                </a>
-                                <button className={style["btn-reset"]} id="playground-send-btn">
-                                    Send Request
-                                </button>
-                            </div>
-                            <div id="playground-console"></div>
-                        </div>
+                        <RequestJSONBox />
                     </div>
                     <div id="playground" className={style["playground-api-docs"]}>
                         <div id="playground-req-schema"></div>

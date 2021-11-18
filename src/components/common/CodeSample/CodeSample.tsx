@@ -48,7 +48,7 @@ const CodeSample = ({ id, title, desc, subdesc }: Props) => {
 
 
     return (
-        <div className={styles.codeBlock}>
+        <div className={styles.codeBlock} id="codeSample">
             <h2 className={styles.codeBlockTitle}>{title}</h2>
             <p className={styles.codeBlockDesc}>{desc}</p>
             {subdesc && <p className={styles.codeBlockDesc}>{subdesc}</p>}

@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+
+import { useState, useEffect } from "react";
 import Prism from "prismjs"
 import "prismjs/components/prism-markup-templating.js";
 import "prismjs/components/prism-javascript";
@@ -14,17 +15,23 @@ type Props = {
 
 const CodeContent = ({ lang, data }: Props) => {
 
+    const [show_data, setShowData] = useState(false)
+
     useEffect(() => {
+        setShowData(true)
         Prism.highlightAll()
     }, [lang, data])
 
     return (
-        <div>
-            <pre className={styles.pre}><code className={`language-${lang}`}>{data}</code></pre>
-        </div>
+        <>
+            {show_data ? (
+                <div id="codeContent">
+                    <pre className={styles.pre}><code className={`language-${lang}`}>{data}</code></pre>
+                </div>
+            ) : null}
 
+        </>
     )
 }
 
 export default CodeContent;
-

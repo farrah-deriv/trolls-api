@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import CodeContent from "../CodeContent/CodeContent"
+import CodeContent from "../CodeContent/CodeContent";
+import CopyButton from "../CopyButton/CopyButton";
 import styles from "./CodeSample.module.scss";
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 
 const CodeSample = ({ id, title, desc, subdesc }: Props) => {
 
-    const [jsContent, setjsContent] = useState(" ");
+    const [fileContent, setFileContent] = useState(" ");
     const [lang, setLang] = useState("javascript");
 
     useEffect(() => {
@@ -22,30 +23,11 @@ const CodeSample = ({ id, title, desc, subdesc }: Props) => {
 
         fetch(filePath).then((response) => response.text()).then(data => {
             const formattedCode = data.replaceAll("&lt;", "<").replaceAll("&gt;", ">")
-            setjsContent(formattedCode)
+            setFileContent(formattedCode)
 
         }
         )
     }, [id, lang])
-
-
-    const fallbackCopyTextToClipboard = () => {
-        let dummy = document.createElement("textarea");
-        document.body.appendChild(dummy);
-        dummy.value = jsContent;
-        dummy.select();
-        document.execCommand("copy");
-        document.body.removeChild(dummy);
-    }
-
-    const handleCopyButtonClick = () => {
-        if (!navigator.clipboard) {
-            fallbackCopyTextToClipboard();
-            return;
-        }
-        navigator.clipboard.writeText(jsContent);
-    }
-
 
     return (
         <div className={styles.codeBlock} id="codeSample">
@@ -62,16 +44,12 @@ const CodeSample = ({ id, title, desc, subdesc }: Props) => {
                             <option value="python">Python</option>
                         </select>
                     </p>
-                    <div className={styles.copy_button} onClick={handleCopyButtonClick}>
-                        <Image className={styles.copy_button_image} src="/copy.svg" width="16" height="16" alt="copy code icon" />
-                        <span className={styles.copy_button_text}> Copy </span>
-                    </div>
+                    <CopyButton size="16" contentToCopy={fileContent} />
                 </div>
-                <CodeContent lang={lang} data={jsContent} />
+                <CodeContent lang={lang} data={fileContent} />
             </div>
         </div>
     )
 }
-
 
 export default CodeSample;

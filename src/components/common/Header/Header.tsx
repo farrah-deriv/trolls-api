@@ -1,9 +1,14 @@
-import React from "react";
+import useIsMobile from "hooks/useIsMobile";
 import Image from "next/image";
 import Link from "next/link";
-import useIsMobile from "hooks/useIsMobile";
-import styles from "./Header.module.scss";
+import React, { MouseEventHandler } from "react";
 import { PATHS } from "utils";
+import styles from "./Header.module.scss";
+
+type HeaderPropsType = {
+    is_canvas_menu_shown: boolean;
+    toggleCanvasMenu: (is_canvas_menu_shown: boolean) => void;
+};
 
 const navigation = [
     { id: "deriv-com", title: "Deriv website", path: "https://deriv.com" },
@@ -14,10 +19,15 @@ const navigation = [
     { id: "playground", title: "API Playground", path: PATHS.PLAYGROUND },
 ];
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderPropsType> = React.memo(({ is_canvas_menu_shown, toggleCanvasMenu }) => {
     const is_mobile = useIsMobile();
     const image_width = is_mobile ? 84 : 180;
     const image_height = is_mobile ? 34 : 73;
+    const menu_icon_src = is_canvas_menu_shown ? "/close.svg" : "/hamburger_menu.svg";
+
+    const handleHamburgerClick: MouseEventHandler<HTMLDivElement> = e => {
+        toggleCanvasMenu(!is_canvas_menu_shown);
+    };
 
     return (
         <div id="main-nav" className={styles.nav}>
@@ -36,8 +46,8 @@ const Header: React.FC = () => {
 
             <header className={styles.header}>
                 <div className={styles["header-container"]}>
-                    <div id="hamburger" className={styles.hamburger}>
-                        <Image alt="Hamburger menu" src="/hamburger_menu.svg" width="16" height="16" />
+                    <div id="hamburger" className={styles.hamburger} onClick={handleHamburgerClick}>
+                        <Image alt="Hamburger menu" src={menu_icon_src} width="16" height="16" />
                     </div>
                     <Link href={navigation[0].path}>
                         <a className={styles["flex-container"]}>
@@ -60,6 +70,8 @@ const Header: React.FC = () => {
             </header>
         </div>
     );
-};
+});
+
+Header.displayName = "Header";
 
 export default Header;

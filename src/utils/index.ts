@@ -1,3 +1,5 @@
+export * from "./content";
+
 export const isMobile: Function = (): boolean => window.innerWidth <= 992;
 
 export const PATHS = {

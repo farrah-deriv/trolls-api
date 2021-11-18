@@ -1,19 +1,21 @@
-import "styles/globals.scss";
+import CanvasMenu from "components/common/CanvasMenu/CanvasMenu";
+import Footer from "components/common/Footer";
+import Header from "components/common/Header/Header";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import "../../src/styles/prism-theme.css"
-import Header from "components/common/Header/Header";
-import Footer from "components/common/Footer";
+import { useState } from "react";
+import "styles/globals.scss";
+import "../../src/styles/prism-theme.css";
 import { PageComponentWithLayout } from "../types";
-import CanvasMenu from "components/common/CanvasMenu/CanvasMenu";
 
-const EmptyLayout: React.FC = ({ children }) => <div id="what?">{children}</div>;
+const EmptyLayout: React.FC = ({ children }) => <>{children}</>;
 
 type MyApp = AppProps & {
     Component: PageComponentWithLayout;
 };
 
 const MyApp = ({ Component, pageProps }: MyApp) => {
+    const [is_canvas_menu_shown, setIsCanvasMenuShown] = useState(false);
     const Layout = Component.Layout || EmptyLayout;
 
     return (
@@ -26,9 +28,9 @@ const MyApp = ({ Component, pageProps }: MyApp) => {
                 />
                 <link rel="icon" href="/deriv.png" />
             </Head>
-            <Header />
-            <CanvasMenu />
-            <div className="main-content">
+            <Header is_canvas_menu_shown={is_canvas_menu_shown} toggleCanvasMenu={setIsCanvasMenuShown} />
+            <CanvasMenu is_canvas_menu_shown={is_canvas_menu_shown} toggleCanvasMenu={setIsCanvasMenuShown} />
+            <div className="main-content" onClick={() => setIsCanvasMenuShown(false)}>
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>

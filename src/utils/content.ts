@@ -1,9 +1,8 @@
 import { BenefitPropsType } from "../components/BenefitsSection/BenefitIcon/BenefitIcon";
 
+// Benefit section content
 
-//Benefit section content
-
-export const benefitIconsArray: Array<BenefitPropsType> = [
+export const benefit_icons_array: Array<BenefitPropsType> = [
     {
         title: "Automation",
         imgPath: "/automation.svg",

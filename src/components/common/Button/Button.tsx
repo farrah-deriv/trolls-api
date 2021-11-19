@@ -1,11 +1,12 @@
 type ButtonPropsType = {
     text: string;
     id?: string;
+    clickHandler?: React.MouseEventHandler<HTMLButtonElement>;
     className?: string;
 };
 
-const Button = ({ text, id, className }: ButtonPropsType) => (
-    <button id={id} className={className}>
+const Button = ({ text, id, clickHandler, className }: ButtonPropsType) => (
+    <button id={id} className={className} onClick={clickHandler}>
         {text}
     </button>
 );

@@ -20,12 +20,20 @@
 .playground-page-wrapper {
     display: flex;
     width: 95%;
+
+    @media (max-width: 1078px) {
+        flex-direction: column;
+    }
 }
 
 .playground-api-docs {
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @media (max-width: 1078px) {
+        width: 100%;
+    }
 }
 
 .playground-api-json {
@@ -33,6 +41,10 @@
     flex-direction: column;
     margin-right: 24px;
     width: 50%;
+
+    @media (max-width: 1078px) {
+        width: 100%;
+    }
 
     .playground-box {
         border-radius: 6px;
@@ -69,9 +81,8 @@
             padding: 2px 4px;
             background-color: #0e0e0e;
         }
-
     }
-    
+
     .api-token {
         display: flex;
         flex-wrap: nowrap;
@@ -79,6 +90,10 @@
         background-color: #151717;
         margin-bottom: 24px;
         padding: 24px;
+
+        @media (max-width: 992px) and (max-width: 640px) {
+            flex-direction: column-reverse;
+        }
 
         fieldset {
             display: flex;
@@ -91,6 +106,14 @@
             line-height: 1.43;
             border: none;
             color: #333;
+
+            @media (max-width: 992px) and (max-width: 640px) {
+                margin-top: 24px;
+            }
+
+            @media (max-width: 992px) {
+                flex-wrap: nowrap;
+            }
         }
 
         .vertical-separator {
@@ -106,9 +129,9 @@
         flex-wrap: nowrap;
         border-radius: 4px;
         margin-bottom: 24px;
-        border: 0.5px solid #252525B8;
+        border: 0.5px solid #252525b8;
     }
-    
+
     .cta {
         display: flex;
         flex-direction: column;
@@ -119,6 +142,11 @@
         align-items: center;
         justify-content: center;
 
+        @media (max-width: 992px) and (max-width: 640px) {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
         a .cta-button {
             cursor: pointer;
             background-color: #151717;
@@ -128,7 +156,7 @@
             border-radius: 4px;
             border: solid 2px #6e6e6e;
             color: #fff;
-        
+
             &:hover {
                 background-color: #999999;
             }
@@ -215,4 +243,8 @@
     text-align: center;
     font-size: 48px;
     margin-bottom: 40px;
+
+    @media (max-width: 992px) {
+        font-size: 32px;
+    }
 }

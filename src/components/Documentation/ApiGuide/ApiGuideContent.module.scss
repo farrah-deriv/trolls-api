@@ -1,0 +1,56 @@
+.app-registration-header {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #333333;
+  margin-bottom: 8px;
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
+.card-light{
+  border-radius: 4px;
+  border: solid 1px #e5e5e5;
+  background-color: rgba(87, 122, 146, 0.04);
+  color: #333333;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 8px;
+
+  .copy-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: inherit;
+    height: 100%;
+    font-weight: normal;
+    border-left: rgba(229, 229, 229, 0.4) 1px solid;
+    padding: 16px 24px;
+    cursor: copy;
+
+    @media (max-width: 480px) {
+      flex-direction: column-reverse;
+      padding: 8px;
+    }
+  }
+
+  .copy-button:hover {
+    background-color: rgba(87, 122, 146, 0.08);
+  }
+
+}
+
+.card-light-content {
+  width: 100%;
+  padding: 16px 24px;
+
+  @media (max-width: 480px) {
+    padding: 16px;
+    font-size: 15px;
+    line-height: 21px;
+    word-break: break-word;
+  }
+}

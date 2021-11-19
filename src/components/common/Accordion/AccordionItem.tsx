@@ -12,7 +12,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ children, title }) => {
     };
     return (
         <div className={styles["accordion-wrapper"]}>
-            <div className={styles["accordion-header"]} onClick={togglePanel}>
+            <div data-testid="accordion-header" className={styles["accordion-header"]} onClick={togglePanel}>
                 <div className={styles["accordion-text bold"]}>{title}</div>
                 <Image
                     className={

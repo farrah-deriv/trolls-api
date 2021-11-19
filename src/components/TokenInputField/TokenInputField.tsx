@@ -1,5 +1,5 @@
 import style from "./TokenInputField.module.scss";
-import Button from "../Button/Button";
+import Button from "../common/Button/Button";
 
 const TokenInputField = () => {
     return (

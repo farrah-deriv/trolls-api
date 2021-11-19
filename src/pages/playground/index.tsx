@@ -1,10 +1,10 @@
 import style from "./Playground.module.scss";
 import Title from "components/common/Title";
-import SelectRequestInput from "components/common/SelectRequestInput/SelectRequestInput";
-import TokenInputField from "../../components/common/TokenInputField/TokenInputField";
+import SelectRequestInput from "components/SelectRequestInput/SelectRequestInput";
+import TokenInputField from "../../components/TokenInputField/TokenInputField";
 import Button from "components/common/Button/Button";
 import Link from "next/dist/client/link";
-import RequestJSONBox from "components/common/RequestJSONBox/RequestJSONBox";
+import RequestJSONBox from "components/RequestJSONBox/RequestJSONBox";
 
 const PlayGround: React.FC = () => (
     <div id="content" className={`${style["playground-content"]} ${style.dark}`}>

@@ -1,6 +1,6 @@
-import style from "../../../pages/playground/Playground.module.scss";
+import style from "../../pages/playground/Playground.module.scss";
 import Link from "next/dist/client/link";
-import Button from "../Button/Button";
+import Button from "components/common/Button/Button";
 
 const RequestJSONBox = () => (
     <div className={style["playground-box"]}>

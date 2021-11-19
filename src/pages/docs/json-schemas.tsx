@@ -4,12 +4,9 @@ import JsonSchemasComponent from "components/Documentation/Layout/JsonSchemas/Js
 
 
 const JSONSchemas: PageComponentWithLayout = () => {
+
+    return <JsonSchemasComponent/>
     
-    return(
-        <>
-            <JsonSchemasComponent/>
-        </>
-    );
 };
 
 JSONSchemas.Layout = DocsLayout;

@@ -67,3 +67,15 @@
         background-color: #fff;
     }
 }
+
+.vertical-separator {
+    width: 2px;
+    height: inherit;
+    margin-left: 220px;
+    background-color: rgba(240, 241, 243, 0.64);
+}
+
+.page-content {
+    width: calc(100% - 262px);
+    padding-left: 42px;
+}  

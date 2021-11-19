@@ -1,0 +1,52 @@
+.copy_button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: #c2c2c2;
+      border-left: rgba(229, 229, 229, 0.4) 1px solid;
+      padding: 8px 16px;
+      cursor: copy;
+      flex-shrink: 0;
+  
+      &_image {
+        margin: 0 9px 0 3px;
+      }
+  
+      >div {
+        margin-left: 9px;
+      }
+  
+      &:hover {
+        background-color: #424242;
+        border-top-right-radius: 6px;
+      }
+
+
+      &--card{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: fit-content;
+        height: 100%;
+        font-weight: 400;
+        border-left: rgba(229, 229, 229, 0.4) 1px solid;
+        padding: 16px 24px;
+        cursor: copy;
+        color: #333;
+        flex-shrink:0;
+        &_image {
+          margin: 0 9px 0 3px;
+        }
+
+        >div {
+          margin-left: 9px;
+        }
+        @media (max-width: 480px) {
+          flex-direction: column-reverse;
+          padding: 8px;
+        }
+      }
+    }
+
+
+    

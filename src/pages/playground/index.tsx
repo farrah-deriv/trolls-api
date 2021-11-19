@@ -9,7 +9,7 @@ import RequestJSONBox from "components/RequestJSONBox/RequestJSONBox";
 const PlayGround: React.FC = () => (
     <div id="content" className={`${style["playground-content"]} ${style.dark}`}>
         <div className={style["header-title"]}>
-            <Title headerSize="h1">API Playground</Title>
+            <Title headerSize="h1" className={""}>API Playground</Title>
         </div>
         <div className={`${style["page-wrapper"]} ${style.dark}`}>
             <div className={style["playground"]}>

@@ -59,7 +59,7 @@ const FeedbackSection: React.FC<FeedbackSectionPropsType> = ({ id }) => {
         );
     case "bugBounty":
         return (
-            <div className={`${styles.cta} ${styles.ctaPx}`}>
+            <div className={`${styles.cta}`}>
                 <div className={`${styles["row-container"]}`}>
                     <SingleFeedbackSection
                         background={"gray"}

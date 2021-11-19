@@ -9,20 +9,13 @@ const RequestJSONBox = () => (
         <div className={style["json-btn-wrapper"]}>
             <Link href={"javascript:;"}>
                 <a id="playground-reset-btn">
-                    <Button 
-                        className={style["btn-reset"]} 
-                        text={"Reset Connection"}
-                    />
+                    <Button className={style["btn-reset"]} text={"Reset Connection"} />
                 </a>
             </Link>
-            <Button 
-                id="playground-send-btn" 
-                className={style["btn-submit"]} 
-                text={"Send Request"}
-            />
+            <Button id="playground-send-btn" className={style["btn-submit"]} text={"Send Request"} />
         </div>
         <div id="playground-console"></div>
     </div>
-)
+);
 
 export default RequestJSONBox;

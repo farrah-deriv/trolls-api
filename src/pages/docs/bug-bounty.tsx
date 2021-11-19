@@ -1,8 +1,8 @@
+import FeedbackSection from "../../components/FeedbackSection/FeedbackSection";
 import DocsLayout from "../../components/Documentation/Layout/DocsLayout";
-import BugBountyComponent from "../../components/Documentation/BugBountyComponent/BugBountyComponent";
 
 const BugBounty = () => {
-    return <BugBountyComponent />
+    return <FeedbackSection id="bugBounty" />;
 };
 
 BugBounty.Layout = DocsLayout;

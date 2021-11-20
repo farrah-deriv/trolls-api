@@ -1,4 +1,4 @@
-import request_types from "utils/playground_requests";
+import playground_requests from "utils/playground_requests";
 import style from "./SelectRequestInput.module.scss";
 
 const SelectRequestInput: React.FC<{ handleChange: React.ChangeEventHandler<HTMLSelectElement> }> = ({ handleChange }) => {
@@ -9,7 +9,7 @@ const SelectRequestInput: React.FC<{ handleChange: React.ChangeEventHandler<HTML
             <select className={style["dark"]} onChange={handleChange} defaultValue={default_value}>
                 <option disabled>{default_value}</option>
                 <optgroup label="All calls">
-                    {request_types.map(el => <option value={el.name} key={el.name}>{el.title}</option>)}
+                    {playground_requests.map(el => <option value={el.name} key={el.name}>{el.title}</option>)}
                 </optgroup>
             </select>
         </fieldset>

@@ -1,4 +1,4 @@
-const request_types = [
+const playground_requests = [
     {
         "name": "active_symbols",
         "title": "Active Symbols",
@@ -1010,4 +1010,4 @@ const request_types = [
     }
 ]
 
-export default request_types;
+export default playground_requests;

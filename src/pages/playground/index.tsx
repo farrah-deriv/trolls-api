@@ -6,14 +6,14 @@ import Button from "components/common/Button/Button";
 import Link from "next/dist/client/link";
 import RequestJSONBox from "components/RequestJSONBox/RequestJSONBox";
 import { useState } from "react";
-import request_types from "utils/playground_requests";
+import playground_requests from "utils/playground_requests";
 
 const PlayGround: React.FC = () => {
     const [request, setRequest] = useState("");
     const handleSelectChange: React.ChangeEventHandler<HTMLSelectElement> = async e => {
         e.preventDefault();
         const request_name = e.currentTarget.value;
-        const request_body = request_types.find(el => el.name === request_name)?.body;
+        const request_body = playground_requests.find(el => el.name === request_name)?.body;
         setRequest(JSON.stringify(request_body));
     }
     const handleTextAreaInput: React.ChangeEventHandler<HTMLTextAreaElement> = e => setRequest(e.target.value);

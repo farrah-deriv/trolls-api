@@ -9,13 +9,14 @@ import { useState } from "react";
 import request_types from "utils/playground_requests";
 
 const PlayGround: React.FC = () => {
-    const [request, setRequest] = useState("siski");
+    const [request, setRequest] = useState("");
     const handleSelectChange: React.ChangeEventHandler<HTMLSelectElement> = async e => {
         e.preventDefault();
         const request_name = e.currentTarget.value;
         const request_body = request_types.find(el => el.name === request_name)?.body;
         setRequest(JSON.stringify(request_body));
     }
+    const handleTextAreaInput: React.ChangeEventHandler<HTMLTextAreaElement> = e => setRequest(e.target.value);
 
     return (
         <div id="content" className={`${style["playground-content"]} ${style.dark}`}>
@@ -39,7 +40,7 @@ const PlayGround: React.FC = () => {
                                     </Link>
                                 </div>
                             </div>
-                            <RequestJSONBox request={request}/>
+                            <RequestJSONBox request_example={request} handleChange={handleTextAreaInput} />
                         </div>
                         <div id="playground" className={style["playground-api-docs"]}>
                             <div id="playground-req-schema"></div>

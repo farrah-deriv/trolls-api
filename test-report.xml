@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/HomePageTests/GetStartedCard.test.tsx">
+    <testCase name="GetStartedCard component test GetStartedCard component is rendered" duration="181"/>
+    <testCase name="GetStartedCard component test GetStartedCard component has &apos;1. test title&apos; text" duration="40"/>
+    <testCase name="GetStartedCard component test GetStartedCard component has &apos;test icon&apos; altText" duration="36"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/BenefitsSectionTests/benefitIcon.test.tsx">
+    <testCase name="BenefitIcon BenefitIcon component is rendered" duration="103"/>
+    <testCase name="BenefitIcon BenefitIcon component has Automation text" duration="36"/>
+    <testCase name="BenefitIcon BenefitSection component has &apos;Automation&apos; altText" duration="32"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/HomePageTests/WaysApi.test.tsx">
+    <testCase name="WaysApi component test WaysApi component is rendered" duration="204"/>
+    <testCase name="WaysApi component test WaysApi component has &apos;Ways to earn with Deriv API&apos; text" duration="84"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/Footer.test.tsx">
+    <testCase name="Footer Footer component is rendered" duration="43"/>
+    <testCase name="Footer Footer contains the text: © 2021 Deriv | All rights reserved" duration="118"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/HomePageTests/Way.test.tsx">
+    <testCase name="Way component test Way component is rendered" duration="164"/>
+    <testCase name="Way component test Way component has &apos;test text&apos; text" duration="36"/>
+    <testCase name="Way component test Way component has &apos;test icon&apos; altText" duration="48"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/CanvasMenu.test.tsx">
+    <testCase name="CanvasMenu CanvasMenu component is rendered with hidden dropdown of Documentation links" duration="253"/>
+    <testCase name="CanvasMenu CanvasMenu component is hidden" duration="53"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/HomePageTests/GetStarted.test.tsx">
+    <testCase name="GetStarted component test GetStarted component is rendered" duration="277"/>
+    <testCase name="GetStarted component test GetStarted component has &apos;Get started with our API in 3 simple steps:&apos; text" duration="65"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/DocumentationPageTests/QuickStartIntro.test.tsx">
+    <testCase name="QuickStartIntro QuickStartIntro component is rendered" duration="140"/>
+    <testCase name="QuickStartIntro QuickStartIntro contains correct text lines" duration="84"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/accordion.test.tsx">
+    <testCase name="Accordion renders the component" duration="132"/>
+    <testCase name="Accordion renders the child component" duration="52"/>
+    <testCase name="Accordion renders the accordion title" duration="38"/>
+    <testCase name="Accordion should not display the accordion item content initially" duration="27"/>
+    <testCase name="Accordion should contain accordion-button--plus class initially" duration="252"/>
+    <testCase name="Accordion toggles accordion on click" duration="125"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/BenefitsSectionTests/benefitSection.test.tsx">
+    <testCase name="BenefitSection BenefitSection component is rendered" duration="261"/>
+    <testCase name="BenefitSection BenefitSection component has &apos;Personalisation&apos; text" duration="110"/>
+    <testCase name="BenefitSection BenefitSection component has &apos;build business icon&apos; altText" duration="94"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/Header.test.tsx">
+    <testCase name="Header Header component is rendered" duration="218"/>
+    <testCase name="Header Header contains hamburger icon" duration="90"/>
+    <testCase name="Header Header contains Deriv Logo" duration="50"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/codeContent.test.tsx">
+    <testCase name="CodeContent renders the CodeContent component" duration="37"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/textContent.test.tsx">
+    <testCase name="TextContent TextContent component is rendered" duration="21"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/comprehensive.test.tsx">
+    <testCase name="Comprehensive Comprehensive section is rendered" duration="45"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/title.test.tsx">
+    <testCase name="Title Title component is rendered" duration="5"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/derivApi.test.tsx">
+    <testCase name="DerivApi DerivApi section is rendered" duration="13"/>
+  </file>
+  <file path="/Users/farrahmaeochoa/trolls-api/src/__tests__/index.test.tsx">
+    <testCase name="Home Home page is rendered" duration="91"/>
+  </file>
+</testExecutions>

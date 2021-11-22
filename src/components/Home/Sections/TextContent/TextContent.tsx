@@ -10,14 +10,16 @@ type DataType = {
 
 type TextContentPropsType = {
     data: DataType,
-  };
+};
 
 const TextContent: React.FC<TextContentPropsType> = ({ data }) => (
-    <div id="textContent">
+    <div id="textContent" className={styleSections.textContent}>
         <Title className="" headerSize="h1">{data.title}</Title>
         <div className={styleSections.subheader}>
             <span>{data.textFirstPart}</span>
-            <span>{data.textSecondPart}</span>
+            {data.textSecondPart.length > 1 ? (
+                <span>{data.textSecondPart}</span>
+            ) : null}
         </div>
     </div>
 );

@@ -2,11 +2,10 @@ import style from "./Playground.module.scss";
 import Title from "components/common/Title";
 import SelectRequestInput from "components/SelectRequestInput/SelectRequestInput";
 import TokenInputField from "../../components/TokenInputField/TokenInputField";
-import Button from "components/common/Button/Button";
-import Link from "next/dist/client/link";
 import RequestJSONBox from "components/RequestJSONBox/RequestJSONBox";
 import { useState } from "react";
 import playground_requests from "utils/playground_requests";
+import data_get_api_token from "utils/data-app-registration";
 
 const PlayGround: React.FC = () => {
     const [request, setRequest] = useState("");
@@ -32,12 +31,8 @@ const PlayGround: React.FC = () => {
                                 <TokenInputField />
                                 <div className={style["vertical-separator"]}></div>
                                 <div className={style["cta"]}>
-                                    <p className={style["title"]}>Looking for your API token?</p>
-                                    <Link href="https://app.deriv.com/account/api-token">
-                                        <a target="tokeninput">
-                                            <Button className={style["cta-button"]} text={"Get your API token"} />
-                                        </a>
-                                    </Link>
+                                    <Title headerSize="h3" className={style["title"]}>{data_get_api_token.textFocus}</Title>
+                                    {data_get_api_token.button}
                                 </div>
                             </div>
                             <RequestJSONBox request_example={request} handleChange={handleTextAreaInput} />

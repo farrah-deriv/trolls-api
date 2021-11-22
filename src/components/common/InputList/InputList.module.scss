@@ -1,0 +1,42 @@
+@import "../../../styles/colors.module";
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+
+    input[type=text] {
+        border-radius: 4px;
+        width: 100%;
+        height: 40px;
+        padding: 0 12px;
+        border: solid 1px #d6dadb;
+        font-size: 14px;
+        line-height: 1.43;
+        color: $black-color;
+        margin-bottom: 24px;
+    }
+
+    .helper-text {
+        width: 100%;
+        padding-left: 12px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: $dark-grey-color;
+    }
+}
+
+.helper-label {
+    position: absolute;
+    left: 0.5vw;
+    top: -12px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: $black-color;
+    background-color: $white-color;
+    margin-bottom: 0;
+    padding: 4px;
+}

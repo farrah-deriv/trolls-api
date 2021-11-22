@@ -3,15 +3,19 @@ import Button from "components/common/Button/Button";
 import React, { useRef, useState } from "react";
 import { api } from "appid";
 import ConsoleMessage from "components/ConsoleMessage/ConsoleMessage";
+import data_request_json_box from "utils/data-request-json-box";
+import Title from "components/common/Title";
 
 type RequestJSONBoxPropTypes = {
     request_example: string;
     handleChange: React.ChangeEventHandler<HTMLTextAreaElement>;
+    isAppRegistration?: boolean;
 }
 
-const RequestJSONBox: React.FC<RequestJSONBoxPropTypes> = ({ request_example, handleChange }) => {
+const RequestJSONBox: React.FC<RequestJSONBoxPropTypes> = ({ request_example, handleChange, isAppRegistration }) => {
     const [messages, setMessages] = useState([] as Array<any>);
     const request_input = useRef<HTMLTextAreaElement>(null);
+    const{ title } = data_request_json_box;
 
     const sendRequest = () => {
         const request = request_input.current && JSON.parse(request_input.current?.value);
@@ -21,14 +25,19 @@ const RequestJSONBox: React.FC<RequestJSONBoxPropTypes> = ({ request_example, ha
     }
 
     return (
-        <div className={style["playground-box"]}>
-            <label className={style["inline-label"]}>Request JSON</label>
+        <div className={isAppRegistration ? style["form-content"] : style["playground-box"]}>
+            {isAppRegistration ? 
+                    ( <Title className={style["app-registration-subheader"]} headerSize="h3">{title}</Title> ) :
+                    ( <label className={style["inline-label"]}>{ title }</label> )}
             <textarea 
-                id="playground-request" 
-                placeholder="Request JSON" 
+                id="playground-request"
+                className={isAppRegistration ? `${style["textarea-request"]} ${style["registration-request"]}` 
+                        : `${style["textarea-request"]} ${style["playground-request"]}`} 
+                placeholder={title.toString()} 
                 ref={request_input}
                 value={request_example}
                 onChange={handleChange}
+                spellCheck={isAppRegistration ? false : undefined}
             />
             <div className={style["json-btn-wrapper"]}>
                 <Button className={style["btn-reset"]} text={"Reset Connection"} />

@@ -185,3 +185,108 @@
     color: $white-color;
     background-color: $black-color-2;
 }
+
+
+.playground-box {
+    border-radius: 6px;
+    border: none;
+    background-color: #151717;
+    padding: 24px 24px 82px 24px;
+    margin-bottom: 40px;
+    position: relative;
+
+    .playground-console {
+        width: 100%;
+
+        @media (max-width: 992px) {
+            max-height: 400px;
+        }
+        .progress {
+            margin: 0 auto;
+        }
+        pre .key {
+            color: #f92672;
+        }
+        pre .string {
+            color: #e6db74;
+        }
+        pre .number {
+            color: #ae81ff;
+        }
+        pre.req, pre.res, pre.err {
+            padding: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #0e0e0e;
+            color: #c2c2c2;
+            line-height: 24px;
+            max-width: 100%;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin-bottom: 16px;
+        }
+    }
+
+    .inline-label {
+        position: absolute;
+        top: 17px;
+        left: 30px;
+        font-size: 10px;
+        padding: 2px 4px;
+        background-color: #0e0e0e;
+
+        @media (max-width: 480px) {
+            top: 16px;
+            left: 23px;
+        }
+    }
+
+    .json-btn-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 26px 0 40px;
+
+        .btn-submit {
+            background-color: #151717;
+            border: #6e6e6e 2px solid;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1.43;
+            padding: 8px 16px;
+            margin: 0 8px 0 0;
+        }
+
+        #playground-reset-btn {
+            .btn-reset {
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 1.43;
+                background-color: #ff444f;
+                padding: 10px 16px;
+
+                &:hover {
+                    background-color: rgba(255, 68, 79, 0.68);
+                }
+            }
+        }
+    }
+
+    textarea {
+        min-height: 200px;
+        padding: 10px 12px;
+        border: none;
+        border-radius: 4px;
+        background-color: #0e0e0e;
+        color: #c2c2c2;
+        resize: none;
+
+        @media (max-width: 480px) {
+            font-size: 14px;
+        }
+    }
+}

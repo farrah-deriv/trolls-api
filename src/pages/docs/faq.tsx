@@ -24,7 +24,7 @@ const FAQ: InferGetStaticPropsType<typeof getStaticProps> = ({ ...props }) => {
         <div className="with-bg">
             <h1 className="doc-main-title">FAQ</h1>
             <Accordion>
-                <AccordionItem title="What is the easiest way to get started with Deriv API? ">
+                <AccordionItem title="What is the easiest way to get started with Deriv API?">
                     <p>
                         View our <Link href="/docs">code samples</Link>. You can use these code snippets in your app to
                         open a connection to our WebSocket API service. Explore our

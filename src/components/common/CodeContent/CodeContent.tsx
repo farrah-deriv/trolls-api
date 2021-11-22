@@ -15,6 +15,7 @@ type CodeContentProps = {
 
 const CodeContent: React.FC<CodeContentProps> = ({ lang, data }) => {
     const [show_data, setShowData] = useState(false)
+
     useEffect(() => {
         setShowData(true)
         Prism.highlightAll()

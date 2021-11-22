@@ -3,7 +3,7 @@ import data_comprehensive from "utils/data-comprehensive";
 import styles from "./Comprehensive.module.scss";
 import Image from "next/image";
 import styleSections from "../Sections.module.scss";
-import TextContent from "../TextContent/TextContent";
+import TextContent from "../TextContent";
 
 const Comprehensive: React.FC = () => (
     <section className={styleSections["main-page-row"]} id="comprehensive">

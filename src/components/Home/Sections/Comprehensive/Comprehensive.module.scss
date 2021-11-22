@@ -1,3 +1,4 @@
+@import "../../../../styles/colors.module";
 @import "../Sections.module";
 
 .rowContainer {
@@ -31,7 +32,6 @@
             text-align: center;
             color: $black-color; 
             margin-top: 0;
-            max-width: 1024px;
         }
 
         span {

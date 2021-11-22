@@ -1,0 +1,3 @@
+import AppAuthentificationRegistration from "./AppAuthentificationRegistration";
+
+export default AppAuthentificationRegistration;

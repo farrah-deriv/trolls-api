@@ -1,4 +1,4 @@
-import { benefitIconsArray } from "../../utils/content";
+import { benefit_icons_array } from "utils";
 import { BenefitIcon } from "../BenefitsSection/BenefitIcon/BenefitIcon";
 import styles from "./BenefitSection.module.scss";
 import Image from "next/image";
@@ -9,7 +9,7 @@ export const BenefitSection = () => {
             <div className={`${styles["column-container"]} `}>
                 <h1>{"Benefits of using Deriv API"}</h1>
                 <div className={`${styles.container} ${styles["benefits-icons"]}`}>
-                    {benefitIconsArray.map((el, index) => {
+                    {benefit_icons_array.map((el, index) => {
                         return <BenefitIcon title={el.title} imgPath={el.imgPath} key={index} />;
                     })}
                 </div>

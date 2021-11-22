@@ -5,7 +5,7 @@ import TextContent from "../TextContent";
 
 const DerivApi: React.FC = () => (
 
-    <div className={styles["hero-image"]}>
+    <div className={styles["hero-image"]} id="derivApi">
         <div className={styles["hero-container"]}>
             <TextContent data={data_deriv_api}/>
         </div>

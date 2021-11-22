@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { BenefitIcon } from "./BenefitIcon";
+import { BenefitIcon } from "../../components/BenefitsSection/BenefitIcon/BenefitIcon";
 
 describe("BenefitIcon", () => {
     const props = {

@@ -3,8 +3,7 @@
     border-radius: 6px;
     border: none;
     background-color: $black-color-1;
-    padding: 24px 24px 82px;
-    margin-bottom: 40px;
+    padding: 24px 15px;
     position: relative;
 
     .inline-label {
@@ -24,6 +23,10 @@
     justify-content: center;
     width: 80%;
 
+    @media (max-width: 390px) {
+        width: 100%;
+    }
+
     .app-registration-subheader {
         align-self: flex-start;
         margin-bottom: 16px;
@@ -35,7 +38,7 @@
 }
 
 .textarea-request {
-    width: calc(100% - 16px);
+    width: 100%;
     border-radius: 4px;
     resize: none;
 }

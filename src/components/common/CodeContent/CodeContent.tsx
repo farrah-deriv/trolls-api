@@ -19,7 +19,6 @@ const CodeContent: React.FC<CodeContentProps> = ({ lang, data }) => {
         setShowData(true)
         Prism.highlightAll()
     }, [lang, data])
-
     return (
         <>
             {show_data && (

@@ -6,6 +6,7 @@ import Title from "../../common/Title/Title";
 
 type CallOptionsProps = {
     category: number;
+    title: string;
 };
 
 const prices = [
@@ -47,10 +48,10 @@ const utility = [
 
 const categories = [prices, payment, utility];
 
-const CallOptions: React.FC<CallOptionsProps> = ({ category }) => {
+const CallOptions: React.FC<CallOptionsProps> = ({ category, title }) => {
     return (
         <div className={common["text-block"]}>
-            <Title className={common["doc-sub-title"]} headerSize={"h2"}>Option prices</Title>
+            <Title className={common["doc-sub-title"]} headerSize={"h2"}>{title}</Title>
             <ul className="bullet">
                 {categories[category].map((item, index) => {
                     return (

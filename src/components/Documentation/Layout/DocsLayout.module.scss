@@ -43,14 +43,10 @@
         }
         .page-content {
             width: calc(100% - 262px);
+            padding-left: 42px;
             @media (max-width: 992px) {
                 width: 100%;
                 padding-left: unset;
-            }
-            @media (min-width: 992px) {
-                > div {
-                    padding-left: 42px;
-                }
             }
         }
     }
@@ -67,3 +63,15 @@
         background-color: #fff;
     }
 }
+
+.vertical-separator {
+    width: 2px;
+    height: inherit;
+    margin-left: 220px;
+    background-color: rgba(240, 241, 243, 0.64);
+}
+
+.page-content {
+    width: calc(100% - 262px);
+    padding-left: 42px;
+}  

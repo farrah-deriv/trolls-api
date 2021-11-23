@@ -146,9 +146,9 @@ const ApiGuideContent: React.FC = () => (
                 <CodeLink href="/playground/#transaction">transactions</CodeLink>
             </p>
         </div>
-        <CallOptions category={0} />
-        <CallOptions category={1} />
-        <CallOptions category={2} />
+        <CallOptions category={0} title={"Option prices"} />
+        <CallOptions category={1} title={"Payment agents"} />
+        <CallOptions category={2} title={"Utility calls"} />
         <div className={common["text-block"]}>
             <Title className={common["doc-sub-title"]} headerSize={"h2"}>Streams</Title>
             <p>

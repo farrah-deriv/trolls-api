@@ -13,7 +13,7 @@ const PlayGround: React.FC = () => {
         e.preventDefault();
         const request_name = e.currentTarget.value;
         const request_body = playground_requests.find(el => el.name === request_name)?.body;
-        setRequest(JSON.stringify(request_body));
+        setRequest(JSON.stringify(request_body, null, 4));
     }
     const handleTextAreaInput: React.ChangeEventHandler<HTMLTextAreaElement> = e => setRequest(e.target.value);
 

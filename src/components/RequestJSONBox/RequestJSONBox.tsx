@@ -52,7 +52,7 @@ const RequestJSONBox: React.FC<RequestJSONBoxPropTypes> = ({ request_example, ha
                     />
                 </div>
             </div>
-            <div id="playground-console" className={style["playground-console"]}>
+            <div id="playground-console" className={styles["playground-console"]}>
                 {messages?.map((message, index) => <ConsoleMessage key={"message" + index} message={message}></ConsoleMessage>)}
             </div>
         </div>

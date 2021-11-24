@@ -30,11 +30,11 @@ const CodeContent: React.FC<CodeContentProps> = ({ lang, data }) => {
 
 
     Prism.plugins.customClass.add(({ content, type, lang }: plugin) => {
-        if (content === 'function') {
-            return 'storage-function';
+        if (content === "function") {
+            return "storage-function";
         }
-        if (content === '&lt;?php') {
-            return 'token operator';
+        if (content === "&lt;?php") {
+            return "token operator";
         }
     });
 

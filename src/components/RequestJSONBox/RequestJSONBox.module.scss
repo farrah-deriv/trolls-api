@@ -82,7 +82,7 @@
         border: $dark-grey-color-1 2px solid;
     }
 
-    .gray-btn-submit button{
+    .gray-btn-submit button {
         padding: 8px 16px;
         border: solid 2px $dark-grey-color;
         background-color: $white-color;
@@ -106,9 +106,14 @@
         letter-spacing: normal;
         text-align: center;
         color: $white-color;
-    
+
         &:hover {
             background-color: $red-color-2;
         }
     }
+}
+
+.playground-console {
+    max-height: 60vh;
+    overflow-y: auto;
 }

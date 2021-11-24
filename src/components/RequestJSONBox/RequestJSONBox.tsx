@@ -15,47 +15,77 @@ type RequestJSONBoxPropTypes = {
 const RequestJSONBox: React.FC<RequestJSONBoxPropTypes> = ({ request_example, handleChange, isAppRegistration }) => {
     const [messages, setMessages] = useState([] as Array<any>);
     const request_input = useRef<HTMLTextAreaElement>(null);
-    const{ title, buttonReset } = data_request_json_box;
+    const { title, buttonReset } = data_request_json_box;
     const sendRequest = () => {
         const request = request_input.current && JSON.parse(request_input.current?.value);
-        request && api.send(request)
-            .then((res: any) => setMessages([...messages, {body: request, type: "req"}, {body: res, type: "res"}]))
-            .catch((err: any) => setMessages([...messages, {body: request, type: "req"}, {body: err, type: "err"}]))
-    }
+        request &&
+            api
+                .send(request)
+                .then((res: any) => {
+                    setMessages([...messages, { body: request, type: "req" }, { body: res, type: "res" }]);
+                })
+                .catch((err: any) => {
+                    setMessages([...messages, { body: request, type: "req" }, { body: err, type: "err" }]);
+                });
+    };
+    const playground_ref = useRef<HTMLDivElement>(null);
+    const scrollToBottom = () => {
+        playground_ref.current?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+    };
+
+    React.useEffect(() => {
+        scrollToBottom;
+    }, [messages]);
+
     return (
         <div className={isAppRegistration ? style["form-content"] : style["playground-box"]}>
-            {isAppRegistration ? 
-                ( <Title className={style["app-registration-subheader"]} headerSize="h3">{title}</Title> ) :
-                ( <label className={style["inline-label"]}>{ title }</label> )}
-            <textarea 
+            {isAppRegistration ? (
+                <Title className={style["app-registration-subheader"]} headerSize="h3">
+                    {title}
+                </Title>
+            ) : (
+                <label className={style["inline-label"]}>{title}</label>
+            )}
+            <textarea
                 id="playground-request"
-                className={isAppRegistration ? `${style["textarea-request"]} ${style["registration-request"]}` 
-                    : `${style["textarea-request"]} ${style["playground-request"]}`}
-                placeholder={title.toString()} 
+                className={
+                    isAppRegistration
+                        ? `${style["textarea-request"]} ${style["registration-request"]}`
+                        : `${style["textarea-request"]} ${style["playground-request"]}`
+                }
+                placeholder={title.toString()}
                 ref={request_input}
                 value={request_example}
                 onChange={handleChange}
                 spellCheck={isAppRegistration ? false : undefined}
             />
             <div className={style["json-btn-wrapper"]}>
-                <div className={isAppRegistration ? `${style["btn-reset"]} ${style["gray-btn-submit"]}` 
-                    : `${style["btn-reset"]} ${style["btn-reset-playground"]}`}>
+                <div
+                    className={
+                        isAppRegistration
+                            ? `${style["btn-reset"]} ${style["gray-btn-submit"]}`
+                            : `${style["btn-reset"]} ${style["btn-reset-playground"]}`
+                    }
+                >
                     {buttonReset}
                 </div>
                 <div className={style["btn-submit"]}>
-                    <Button 
+                    <Button
                         id="playground-send-btn"
                         className={style["btn-submit"]}
                         text={"Send Request"}
-                        clickHandler={ sendRequest }
+                        clickHandler={sendRequest}
                     />
                 </div>
             </div>
             <div id="playground-console" className={style["playground-console"]}>
-                {messages?.map((message, index) => <ConsoleMessage key={"message"+index} message={message}></ConsoleMessage>)}
+                {messages?.map((message, index) => (
+                    <ConsoleMessage key={"message" + index} message={message}></ConsoleMessage>
+                ))}
+                <div id="test" ref={playground_ref} />
             </div>
         </div>
-    )
+    );
 };
 
 export default RequestJSONBox;

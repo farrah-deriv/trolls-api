@@ -8,10 +8,14 @@
 
 .token.keyword,
 .token.operator,
-.operator-php::first-letter {
+.operator-php::first-letter,
+.token.property.json{
     color: #f92672;
 }
 
+.token.operator.json{
+    color:white;
+}
 .token.string {
     color: #e6db74;
 }

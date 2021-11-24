@@ -9,12 +9,12 @@ import "prismjs/plugins/custom-class/prism-custom-class.js";
 import styles from "./CodeContent.module.scss";
 
 type CodeContentProps = {
-    lang: string,
-    data: string
+    lang: string;
+    data: string;
 }
 
 type plugin = {
-    content: string,
+    content: string;
 }
 
 

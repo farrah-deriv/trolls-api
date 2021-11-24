@@ -1,12 +1,16 @@
-.token.comment{     
-    color:#75715e;
+.token.comment {
+    color: #75715e;
 }
 
+.operator-php{
+    display:inline-block;
+}
 
-.token.keyword,.token.operator{
+.token.keyword,
+.token.operator,
+.operator-php::first-letter {
     color: #f92672;
 }
-
 
 .token.string {
     color: #e6db74;
@@ -20,3 +24,4 @@
     font-style: italic;
     color: #66d9ef !important;;
 }
+

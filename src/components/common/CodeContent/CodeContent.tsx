@@ -1,6 +1,5 @@
-
-import { useState, useEffect } from "react";
-import Prism from "prismjs"
+import { useEffect, useState } from "react";
+import Prism from "prismjs";
 import "prismjs/components/prism-markup-templating.js";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-python";
@@ -13,10 +12,9 @@ type CodeContentProps = {
     lang: string,
     data: string
 }
+
 type plugin = {
     content: string,
-    type: string,
-    lang: string
 }
 
 
@@ -29,12 +27,12 @@ const CodeContent: React.FC<CodeContentProps> = ({ lang, data }) => {
     }, [lang, data, getCodeHighlight])
 
 
-    Prism.plugins.customClass.add(({ content, type, lang }: plugin) => {
+    Prism.plugins.customClass.add(({ content }: plugin) => {
         if (content === "function") {
             return "storage-function";
         }
         if (content === "&lt;?php") {
-            return "token operator";
+            return "operator-php";
         }
     });
 
@@ -42,9 +40,11 @@ const CodeContent: React.FC<CodeContentProps> = ({ lang, data }) => {
     return (
         <>
             {show_data && (
-                <div id="code-content" >
-                    <pre className={styles.pre}><code className={`language-${lang}`}>{data}</code></pre>
-                </div>
+                <>
+                    <pre className={styles.pre}>
+                        <code className={`language-${lang}`}>{data}</code>
+                    </pre>
+                </>
             )}
         </>
     )

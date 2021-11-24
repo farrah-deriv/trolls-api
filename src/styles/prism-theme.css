@@ -15,3 +15,8 @@
 .token.number {
     color: #ae81ff;
 }
+
+.storage-function{
+    font-style: italic;
+    color: #66d9ef !important;;
+}

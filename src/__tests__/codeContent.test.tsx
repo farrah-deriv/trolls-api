@@ -4,8 +4,8 @@ import CodeContent from "../components/common/CodeContent/CodeContent";
 
 describe("CodeContent", () => {
     it("renders the CodeContent component", () => {
-        const result = render(<CodeContent />);
-        expect(result.container.querySelector("#codeContent")).toBeInTheDocument();
+        const result = render(<CodeContent lang="javascript" data="sample" />);
+        expect(result.container.querySelector("#code-content")).toBeInTheDocument();
     });
 });
 

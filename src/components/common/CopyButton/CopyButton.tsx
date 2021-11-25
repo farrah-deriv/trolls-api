@@ -25,7 +25,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({ size = "16", content_to_copy, c
         navigator.clipboard.writeText(content_to_copy);
     }
     return (
-        <div className={styles[`${className}`]} onClick={handleCopyButtonClick} >
+        <div data-testid="copyButton" className={styles[`${className}`]} onClick={handleCopyButtonClick} >
             <Image className={styles.copy_button_image} src="/copy.svg" width={size} height={size} alt="copy code icon" />
             <div className={styles.copy_button_text}> Copy </div>
         </div >

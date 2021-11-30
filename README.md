@@ -23,6 +23,10 @@ Starts the application in production mode.
 
 Runs the jest test suite. The test files are located in `src/__tests__` directory.
 
+**npm run test:src-coverage**
+
+Check the test coverage of all project files. All project files are located in `src` directory.
+
  **npm run lint**
  
  Runs ESlint for all the files in `pages`, `components`, and `utils` directories.

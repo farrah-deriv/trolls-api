@@ -71,7 +71,7 @@ const RequestJSONBox: React.FC<RequestJSONBoxPropTypes> = ({
                 resetMessagesInConsole={setMessages}
                 current_api={current_api}
             />
-            {messages && (
+            {messages.length > 1 && (
                 <div id="playground-console" className={style["playground-console"]} ref={messagesRef}>
                     {messages?.map((message, index) => (
                         <ConsoleMessage key={"message" + index} message={message}></ConsoleMessage>
